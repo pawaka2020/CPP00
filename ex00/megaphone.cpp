@@ -35,21 +35,19 @@ std::string combine_params(int argc, char** argv) {
 //work like a 'pointer' in C.
 std::string remove_extra_spaces(const std::string &str) {
     std::string result = "";
-	bool first_space = true;
+    bool first_space = true;
 
-	for (char c : str){
-		if (!std::isspace(c))
-		{
-			first_space = true;
-		}
-		else
-		{
-			if (first_space == false) continue;
-			first_space = false;
-		}
-		result += c;
-	}
-
+    for (std::size_t i = 0; i < str.length(); ++i) {
+        char c = str[i];
+        if (!std::isspace(c)) {
+            first_space = true;
+        }
+        else {
+            if (first_space == false) continue;
+            first_space = false;
+        }
+        result += c;
+    }
     return result;
 }
 
