@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
+#include "main.hpp"
 
 //constructor, initialize fields of 'Phonebook' instance.
 PhoneBook::PhoneBook(){
@@ -109,7 +110,6 @@ int	PhoneBook::getNumberInput(int i)
 {
 	int n = 0;
 	std::string userInput;
-	std::stringstream ss;
 	while (1)
 	{
 		std::cout << "Please enter an index number (0 - " + std::to_string(i) + ") : ";
