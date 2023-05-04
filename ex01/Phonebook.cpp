@@ -45,6 +45,7 @@ void PhoneBook::add(){
 	contacts[index].setFirstName(getInput("First name : "));
 	contacts[index].setLastName(getInput("Last name : "));
 	contacts[index].setNickname(getInput("Nickname : "));
+	contacts[index].setPhone(getInput("Phone : "));
 	contacts[index].setDarkestSecret(getInput("Darkest secret : "));
 	std::cout << "'" + contacts[index].getFirstName() + "' added as entry #" + std::to_string(index);
 	std::cout << std::endl;
@@ -129,6 +130,7 @@ void PhoneBook::printContactInfo(int n){
 	std::cout <<"First name : " + contacts[n].getFirstName() << std::endl;
 	std::cout <<"Last name : " + contacts[n].getLastName() << std::endl;
 	std::cout <<"Nickname : " + contacts[n].getNickname() << std::endl;
+	std::cout <<"Phone : " + contacts[n].getPhone() << std::endl;
 	std::cout <<"Darkest secret : " + contacts[n].getDarkestSecret() << std::endl;
 }
 

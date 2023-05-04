@@ -18,7 +18,7 @@ int	main(){
     std::string input = "";
     while (1)
     {
-        std::cout << "Please enter command (ADD, SEARCH, EXIT): ";
+        std::cout << "Please enter command (ADD, SEARCH, EXIT) : ";
         std::getline(std::cin, input);
         if (input == "ADD")
 			phoneBook.add();
